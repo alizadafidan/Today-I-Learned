@@ -1,0 +1,248 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Sono", sans-serif;
+  background-color: #292524;
+  color: #fafaf9;
+  padding: 4.8rem 6.4rem;
+}
+
+.message {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 24px;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#root {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 4.2rem;
+  text-transform: uppercase;
+  font-family: "Coiny", sans-serif;
+  line-height: 1;
+  margin-top: 0.6rem;
+}
+
+.header {
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.logo img {
+  width: 6.8rem;
+  height: 6.8rem;
+}
+
+.fact-form {
+  background-color: #44403c;
+  margin-bottom: 4rem;
+  padding: 1.6rem 3.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  border-radius: 5rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 25rem 1fr;
+  gap: 4.8rem;
+}
+
+.fact {
+  font-size: 2rem;
+  line-height: 1.4;
+  background-color: #44403c;
+  letter-spacing: -1px;
+  margin-bottom: 1.6rem;
+  padding: 1.6rem 3rem;
+  border-radius: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+}
+
+.tag {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-family: "Coiny", sans-serif;
+  padding-top: 0.3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 9rem;
+}
+
+.vote-buttons {
+  margin-left: auto;
+
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.8rem;
+}
+
+.vote-buttons button {
+  background-color: #78716c;
+  border: none;
+  font-size: 1.8rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 9rem;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.vote-buttons button:hover {
+  background-color: #292524;
+}
+
+.vote-buttons button:disabled {
+  background-color: #ef4444;
+}
+
+ul {
+  list-style: none;
+}
+
+.source:link,
+.source:visited {
+  color: #a8a29e;
+  text-decoration: none;
+  margin-left: 1.2rem;
+}
+
+.source:hover,
+.source:active {
+  color: #3b82f6;
+}
+
+.btn {
+  border: none;
+  color: inherit;
+  font-family: "Coiny", sans-serif;
+  line-height: 1;
+  text-transform: 1.7rem;
+  padding: 1.6rem 0 1.3rem;
+  background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
+  transition: 0.1s;
+  border-radius: 9rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
+}
+
+.btn-large {
+  font-size: 2rem;
+  padding: 2rem 3.2rem 1.7rem;
+}
+
+.btn-all-categories {
+  margin-bottom: 1.6rem;
+  width: 100%;
+}
+
+.btn-category {
+  width: 100%;
+  background-image: none;
+}
+
+.category {
+  margin-bottom: 1.6rem;
+}
+
+.fact-form input,
+.fact-form select {
+  background-color: #78716c;
+  border: none;
+  border-radius: 9rem;
+  padding: 1.6rem;
+  font-size: 1.6rem;
+  color: inherit;
+  font-family: inherit;
+  width: 220px;
+}
+
+.fact-form input::placeholder {
+  color: #a8a29e;
+}
+
+.fact-form span {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-right: 1.8rem;
+}
+
+.fact-form input:first-child {
+  flex-grow: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  body {
+    padding: 32px 48px;
+  }
+
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fact-form input,
+  .fact-form select {
+    width: auto;
+  }
+}
